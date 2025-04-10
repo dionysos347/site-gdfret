@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - GD FRET</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #003D7A;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #002B5E;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .column {
+            width: 48%;
+            padding: 15px;
+            background-color: #f2f8ff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #003D7A;
+            border-bottom: 2px solid #003D7A;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        ul li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        footer {
+            background-color: #003D7A;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+<header style="background-color:#003D7A; color:white; padding: 20px 0; text-align:center;">
+    <img src="logo.png" alt="GD FRET Logo" style="height:80px;">
+    <h1 style="margin:10px 0;">Accueil</h1>
+    </header>
+<nav style="background-color:#002855; padding:10px 0; text-align:center;">
+    <a href="index.html" style="color:white; margin:0 15px; text-decoration:none; font-weight:bold;">Accueil</a>
+    <a href="a-propos.html" style="color:white; margin:0 15px; text-decoration:none; font-weight:bold;">À propos</a>
+    <a href="contact.html" style="color:white; margin:0 15px; text-decoration:none; font-weight:bold;">Contact</a>
+</nav>
+
+    <main>
+        <div class="column">
+            <h2>Nos services clés</h2>
+            <ul>
+                <li>Transport national & international</li>
+                <li>Affrètement personnalisé</li>
+                <li>Stockage flexible</li>
+                <li>Solutions logistiques sur mesure</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Pourquoi choisir GD FRET ?</h2>
+            <ul>
+                <li>Réactivité immédiate</li>
+                <li>Un interlocuteur unique dédié</li>
+                <li>Réseau fiable de partenaires</li>
+                <li>Expérience et professionnalisme</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        © 2025 GD FRET – Tous droits réservés
+    </footer>
+</body>
+</html>
