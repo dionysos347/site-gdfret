@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contactez-nous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       background-color: #f7faff;
     }
 
@@ -32,49 +32,47 @@
     }
 
     main {
-      padding: 20px;
+      padding: 12px;
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
       justify-content: center;
       align-items: flex-start;
+      gap: 20px;
     }
 
-    .bloc-coordonnees,
-    .bloc-formulaire {
-      flex: 1 1 300px;
-      max-width: 450px;
+    .bloc {
+      flex: 1;
+      min-width: 280px;
+      max-width: 420px;
     }
 
-    .bloc-coordonnees section {
+    .infos {
       background-color: #003D7A;
       color: white;
-      padding: 15px;
+      padding: 10px;
       border-radius: 10px;
     }
 
-    .bloc-formulaire form {
-      background: white;
-      padding: 15px;
+    .formulaire {
+      background-color: white;
+      padding: 10px;
       border-radius: 10px;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
     }
 
-    .bloc-formulaire h2 {
-      color: #003D7A;
-    }
-
-    form input,
-    form textarea {
+    input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: 8px;
+      margin-bottom: 8px;
       box-sizing: border-box;
+      font-size: 14px;
     }
 
-    form button {
+    textarea {
+      resize: vertical;
+    }
+
+    button {
       background-color: #003D7A;
       color: white;
       border: none;
@@ -84,20 +82,14 @@
     }
 
     @media screen and (max-width: 768px) {
-      main {
-        flex-direction: column;
-        padding: 15px;
-      }
-
-      .bloc-coordonnees,
-      .bloc-formulaire {
-        max-width: 100%;
+      input, textarea {
+        font-size: 16px;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <img src="logo.png" alt="GD FRET Logo" style="height: 80px;" /><br />
     <h1 style="margin: 10px 0;">Contactez-nous</h1>
@@ -111,8 +103,8 @@
 
   <main>
     <!-- Coordonnées -->
-    <div class="bloc-coordonnees">
-      <section>
+    <div class="bloc">
+      <section class="infos">
         <h2>📍 Nos coordonnées</h2>
         <p><strong>Adresse :</strong><br />8 Square Cézanne – 34070 Montpellier Cedex – France</p>
         <p><strong>Téléphone :</strong><br />07.83.70.06.94</p>
@@ -122,29 +114,28 @@
     </div>
 
     <!-- Formulaire -->
-    <div class="bloc-formulaire">
-      <form action="https://formsubmit.co/contact@gdfret.fr" method="POST" enctype="multipart/form-data">
-        <h2>✉️ Contactez-nous</h2>
-        <label>Nom :</label>
-        <input type="text" name="nom" />
+    <div class="bloc">
+      <form class="formulaire" action="https://formsubmit.co/contact@gdfret.fr" method="POST" enctype="multipart/form-data">
+        <h2 style="color:#003D7A;">✉️ Contactez-nous</h2>
 
-        <label>Email :</label>
-        <input type="email" name="email" />
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" />
 
-        <label>Nom société :</label>
-        <input type="text" name="societe" />
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" />
 
-        <label>Message :</label>
-        <textarea name="message" rows="4"></textarea>
+        <label for="societe">Nom société :</label>
+        <input type="text" name="societe" id="societe" />
 
-        <label>Fichier (facultatif) :</label>
-        <input type="file" name="fichier" />
+        <label for="message">Message :</label>
+        <textarea name="message" id="message" rows="3"></textarea>
+
+        <label for="fichier">Fichier (facultatif) :</label>
+        <input type="file" name="fichier" id="fichier" />
 
         <button type="submit">Envoyer</button>
       </form>
     </div>
   </main>
-
 </body>
 </html>
-
