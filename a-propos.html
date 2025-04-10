@@ -1,72 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos de GD FRET</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7faff;
+    }
 
-    <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>À propos de GD FRET</title>
-    </head>
-    <body style="margin:0;font-family:sans-serif;">
-        
-    <header style="background-color:#003D7A; color:white; padding:30px 0; text-align:center;">
-        <img src="logo.png" alt="GD FRET Logo" style="height:80px;"><br>
-        <h1 style="margin:10px 0;">À propos de GD FRET</h1>
-    </header>
-    <nav style="background-color:#002855; padding:10px 0; text-align:center;">
-        <a href="index.html" style="color:white; margin:0 15px; text-decoration:none; font-weight:bold;">Accueil</a>
-        <a href="a-propos.html" style="color:white; margin:0 15px; text-decoration:none; font-weight:bold;">À propos</a>
-        <a href="contact.html" style="color:white; margin:0 15px; text-decoration:none; font-weight:bold;">Contact</a>
-    </nav>
-    
-        
+    header {
+      background-color: #003D7A;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
 
+    nav {
+      background-color: #002855;
+      padding: 10px 0;
+      text-align: center;
+    }
 
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-<main style="font-family: Arial, sans-serif; padding: 12px; background-color: #f7faff;">
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start;">
+    main {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
 
-        <!-- Colonne Gauche -->
-        <div style="flex: 1; min-width: 300px; max-width: 550px;">
-            <h2 style="color: #003D7A; font-size: 18px;">Qui sommes-nous ?</h2>
-            <p style="margin-bottom: 10px;">Un acteur de proximité au service de votre logistique</p>
+    .bloc,
+    .valeurs {
+      background: #eaf3fc;
+      padding: 15px;
+      border-radius: 10px;
+      flex: 1 1 300px;
+    }
 
-            <div style="background: #eaf3fc; padding: 12px; border-radius: 10px; margin-bottom: 15px;">
-                <h3 style="color: #003D7A;">📜 Notre Histoire</h3>
-                <p>Fondée à Montpellier, GD FRET s’est donnée pour mission de réinventer le transport avec réactivité et confiance.</p>
-            </div>
+    .bloc {
+      max-width: 550px;
+    }
 
-            <div style="background: #eaf3fc; padding: 12px; border-radius: 10px;">
-                <h3 style="color: #003D7A;">🎯 Notre Mission</h3>
-                <p>Proposer un accompagnement personnalisé, où chaque client est au cœur de nos engagements.</p>
-            </div>
-        </div>
+    .valeurs {
+      max-width: 400px;
+      background-color: #f0f6ff;
+    }
 
-        <!-- Colonne Droite -->
-        <div style="flex: 1; min-width: 300px; max-width: 400px;">
-            <div style="background-color: #f0f6ff; padding: 12px; border-radius: 10px;">
-                <h2 style="color: #003D7A; font-size: 16px; text-align: center;">Nos valeurs</h2>
-                <div style="margin-top: 15px;">
-                    <div style="margin-bottom: 15px; background:white; padding:15px; border-radius:8px;">
-                        <h4 style="color: #003D7A;">⚡ Réactivité</h4>
-                        <p>Réponse rapide et service 24h/24</p>
-                    </div>
-                    <div style="margin-bottom: 15px; background:white; padding:15px; border-radius:8px;">
-                        <h4 style="color: #003D7A;">🔒 Fiabilité</h4>
-                        <p>Un transport sécurisé et sans surprise</p>
-                    </div>
-                    <div style="background:white; padding:15px; border-radius:8px;">
-                        <h4 style="color: #003D7A;">🤝 Proximité</h4>
-                        <p>Un interlocuteur dédié pour vous accompagner</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .valeurs h2 {
+      text-align: center;
+      color: #003D7A;
+      font-size: 18px;
+    }
 
+    .valeur {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .valeur h4 {
+      color: #003D7A;
+      margin-top: 0;
+    }
+
+    h2, h3 {
+      color: #003D7A;
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      main {
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      .bloc, .valeurs {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="GD FRET Logo" style="height:80px;" /><br />
+    <h1 style="margin:10px 0;">À propos de GD FRET</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <!-- Colonne gauche -->
+    <div class="bloc">
+      <h2>Qui sommes-nous ?</h2>
+      <p>Un acteur de proximité au service de votre logistique</p>
+
+      <div class="valeur">
+        <h3>📜 Notre Histoire</h3>
+        <p>Fondée à Montpellier, GD FRET s’est donnée pour mission de réinventer le transport avec réactivité et confiance.</p>
+      </div>
+
+      <div class="valeur">
+        <h3>🎯 Notre Mission</h3>
+        <p>Proposer un accompagnement personnalisé, où chaque client est au cœur de nos engagements.</p>
+      </div>
     </div>
-</main>
 
+    <!-- Colonne droite -->
+    <div class="valeurs">
+      <h2>Nos valeurs</h2>
 
+      <div class="valeur">
+        <h4>⚡ Réactivité</h4>
+        <p>Réponse rapide et service 24h/24</p>
+      </div>
 
+      <div class="valeur">
+        <h4>🔒 Fiabilité</h4>
+        <p>Un transport sécurisé et sans surprise</p>
+      </div>
 
-    </body>
-    </html>
-    
+      <div class="valeur">
+        <h4>🤝 Proximité</h4>
+        <p>Un interlocuteur dédié pour vous accompagner</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
