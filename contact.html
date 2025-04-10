@@ -53,6 +53,20 @@
       border-radius: 10px;
     }
 
+    /* ✅ Corrige le lien du numéro de téléphone qui devient bleu sur mobile */
+    .infos a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .infos a:visited {
+      color: white;
+    }
+
+    .infos a:hover {
+      text-decoration: underline;
+    }
+
     .formulaire {
       background-color: white;
       padding: 10px;
@@ -107,7 +121,8 @@
       <section class="infos">
         <h2>📍 Nos coordonnées</h2>
         <p><strong>Adresse :</strong><br />8 Square Cézanne – 34070 Montpellier Cedex – France</p>
-        <p><strong>Téléphone :</strong><br />07.83.70.06.94</p>
+        <p><strong>Téléphone :</strong><br />
+          <a href="tel:0783700694">07.83.70.06.94</a></p>
         <p><strong>Email :</strong><br />contact@gdfret.fr</p>
         <p><strong>Horaires :</strong><br />Lundi à Vendredi – 9h00 à 17h</p>
       </section>
@@ -139,3 +154,4 @@
   </main>
 </body>
 </html>
+
